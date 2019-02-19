@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div>Подсказка: в тестовой базе dbtest есть заказы с номерами: 2, 4, 6, 8, 10, 12, 14</div>
+        <br>
+        <div>
+            <form method="post">
+                <input type="text" name="orderId" placeholder="Введите номер заказа"/>
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+        <div><b>Информация о заказе:</b></div>
+        <br>
+        {{#orders}}
+            <div>
+                <b>Номер заказа - </b><span>{{id}}</span><br>
+                <b>Наименование товара - </b><span>{{productName}}</span><br>
+                <b>Цена товара - </b><span>{{productPrice}}</span><br>
+                <b>Количество товаров - </b><span>{{quantityProducts}}</span><br>
+                <b>Общая цена - </b><span>{{totalPrice}}</span><br><br>
+            </div>
+        {{/orders}}
+    </body>
+</html>
